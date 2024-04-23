@@ -1,5 +1,6 @@
 package io.vertigo.chatbot.designer.builder.controllers.bot;
 
+import io.vertigo.chatbot.commons.confluence.impl.ConfluenceServices;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -78,6 +79,8 @@ public class ExtensionsController extends AbstractBotController {
 
 	@Inject
 	private ScriptIntentionServices scriptIntentionServices;
+
+	private ConfluenceServices confluenceServices;
 
 	@GetMapping("/")
 	public void initContext(final ViewContext viewContext, final UiMessageStack uiMessageStack, @PathVariable("botId") final Long botId) {

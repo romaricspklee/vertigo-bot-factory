@@ -87,7 +87,11 @@
 			<artifactId>owasp-java-html-sanitizer</artifactId>
 			<version>${owasp-html-sanitizer.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson-databind.version}</version>
+		</dependency>
 	</dependencies>
 
 

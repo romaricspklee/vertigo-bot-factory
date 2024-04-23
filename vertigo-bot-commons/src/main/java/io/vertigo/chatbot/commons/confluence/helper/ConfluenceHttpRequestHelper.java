@@ -1,4 +1,9 @@
-package io.vertigo.chatbot.engine.plugins.bt.confluence.helper;
+package io.vertigo.chatbot.commons.confluence.helper;
+
+import io.vertigo.chatbot.commons.confluence.model.search.ConfluenceSearchObject;
+import io.vertigo.chatbot.commons.confluence.model.search.ConfluenceSearchOperator;
+import io.vertigo.chatbot.commons.confluence.model.search.ConfluenceVisitor;
+import io.vertigo.core.lang.VSystemException;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -16,11 +21,6 @@ import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
-
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.search.ConfluenceSearchObject;
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.search.ConfluenceSearchOperator;
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.search.ConfluenceVisitor;
-import io.vertigo.core.lang.VSystemException;
 
 public final class ConfluenceHttpRequestHelper {
 

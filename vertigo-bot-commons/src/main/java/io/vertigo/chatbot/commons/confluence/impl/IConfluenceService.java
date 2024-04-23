@@ -1,12 +1,12 @@
-package io.vertigo.chatbot.engine.plugins.bt.confluence.impl;
+package io.vertigo.chatbot.commons.confluence.impl;
+
+import io.vertigo.chatbot.commons.confluence.model.result.ConfluenceSearchResponse;
+import io.vertigo.chatbot.commons.confluence.model.result.ConfluenceSpace;
+import io.vertigo.chatbot.commons.confluence.model.result.ConfluenceSpaceResponse;
+import io.vertigo.chatbot.commons.confluence.model.search.ConfluenceSearchObject;
 
 import java.util.List;
 import java.util.Map;
-
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.result.ConfluenceSearchResponse;
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.result.ConfluenceSpace;
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.result.ConfluenceSpaceResponse;
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.search.ConfluenceSearchObject;
 
 public interface IConfluenceService {
 

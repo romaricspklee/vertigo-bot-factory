@@ -13,12 +13,12 @@ import org.junit.jupiter.api.Test;
 
 import io.vertigo.chatbot.engine.plugins.bt.confluence.helper.ConfluenceHttpRequestHelper;
 import io.vertigo.chatbot.engine.plugins.bt.confluence.impl.ConfluenceServerServices;
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.result.ConfluenceSearchResponse;
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.result.ConfluenceSpace;
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.result.ConfluenceSpaceResponse;
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.search.ConfluenceSearchOperator;
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.search.MultipleConfluenceSearch;
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.search.SingleConfluenceSearch;
+import io.vertigo.chatbot.engine.plugins.bt.confluence.impl.result.ConfluenceSearchResponse;
+import io.vertigo.chatbot.engine.plugins.bt.confluence.impl.result.ConfluenceSpace;
+import io.vertigo.chatbot.engine.plugins.bt.confluence.impl.result.ConfluenceSpaceResponse;
+import io.vertigo.chatbot.engine.plugins.bt.confluence.impl.search.ConfluenceSearchOperator;
+import io.vertigo.chatbot.engine.plugins.bt.confluence.impl.search.MultipleConfluenceSearch;
+import io.vertigo.chatbot.engine.plugins.bt.confluence.impl.search.SingleConfluenceSearch;
 import io.vertigo.core.node.AutoCloseableNode;
 import io.vertigo.core.node.component.di.DIInjector;
 import io.vertigo.core.node.config.BootConfig;

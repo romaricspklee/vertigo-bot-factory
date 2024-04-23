@@ -1,4 +1,4 @@
-package io.vertigo.chatbot.engine.plugins.bt.confluence.model.search;
+package io.vertigo.chatbot.commons.confluence.model.search;
 
 public enum ConfluenceSearchOperator {
 

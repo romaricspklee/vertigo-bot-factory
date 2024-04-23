@@ -5,6 +5,7 @@ import io.vertigo.ai.bb.BBKeyPattern;
 import io.vertigo.ai.bb.BlackBoard;
 import io.vertigo.ai.bt.BTNode;
 import io.vertigo.ai.bt.BTStatus;
+import io.vertigo.chatbot.commons.confluence.impl.ConfluenceServices;
 import io.vertigo.chatbot.engine.BotEngine;
 import io.vertigo.chatbot.engine.plugins.bt.command.bot.BotNodeProvider;
 import io.vertigo.chatbot.engine.plugins.bt.confluence.impl.ConfluenceServerServices;
@@ -20,14 +21,15 @@ import static io.vertigo.chatbot.engine.plugins.bt.command.bot.BotNodeProvider.s
 public final class BotConfluenceNodeProvider implements Component {
 
 	@Inject
-	private ConfluenceServerServices confluenceServerService;
+	private ConfluenceServerServices confluenceServerServices;
 
 	public BTNode confluenceSearch(final BlackBoard bb, final String keyTemplate, final String question, final String listPresentation, final String topicFallbackConfluence) {
 		return sequence(
 				inputString(bb, keyTemplate, question),
 				() -> {
 					final var searchObject = bb.getString(BBKey.of(keyTemplate));
-					final List<String> searchResult = confluenceServerService.searchOnConfluenceCommand(searchObject);
+					final List<String> searchResult = confluenceServerServices.getConfluenceServices()
+							.searchOnConfluenceCommand(searchObject);
 					if (!searchResult.isEmpty()) {
 						bb.listPush(BotEngine.BOT_RESPONSE_KEY, listPresentation);
 
@@ -46,7 +48,8 @@ public final class BotConfluenceNodeProvider implements Component {
 		return sequence(
 				say(bb, introductionSentence),
 				() -> {
-					final List<String> searchResult = confluenceServerService.searchOnConfluenceCommand(String.join(" ", keyWords));
+					final List<String> searchResult = confluenceServerServices.getConfluenceServices()
+							.searchOnConfluenceCommand(String.join(" ", keyWords));
 					if (!searchResult.isEmpty()) {
 						for (final String result : searchResult) {
 							bb.listPush(BotEngine.BOT_RESPONSE_KEY, result);

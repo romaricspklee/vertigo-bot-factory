@@ -1,12 +1,12 @@
-package io.vertigo.chatbot.engine.plugins.bt.confluence.helper;
+package io.vertigo.chatbot.commons.confluence.helper;
 
 import java.util.Arrays;
 import java.util.List;
 
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.search.ConfluenceSearchObject;
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.search.ConfluenceSearchOperator;
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.search.MultipleConfluenceSearch;
-import io.vertigo.chatbot.engine.plugins.bt.confluence.model.search.SingleConfluenceSearch;
+import io.vertigo.chatbot.commons.confluence.model.search.ConfluenceSearchObject;
+import io.vertigo.chatbot.commons.confluence.model.search.ConfluenceSearchOperator;
+import io.vertigo.chatbot.commons.confluence.model.search.MultipleConfluenceSearch;
+import io.vertigo.chatbot.commons.confluence.model.search.SingleConfluenceSearch;
 
 public final class ConfluenceSearchHelper {
 

@@ -1,10 +1,9 @@
-package io.vertigo.chatbot.engine.plugins.bt.confluence.helper;
+package io.vertigo.chatbot.commons.confluence.helper;
 
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import io.vertigo.core.lang.VSystemException;
 
 public class JsonHelper {

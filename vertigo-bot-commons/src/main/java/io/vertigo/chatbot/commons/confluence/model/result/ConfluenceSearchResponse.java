@@ -1,4 +1,4 @@
-package io.vertigo.chatbot.engine.plugins.bt.confluence.model.result;
+package io.vertigo.chatbot.commons.confluence.model.result;
 
 public class ConfluenceSearchResponse extends AbstractConfluenceResponses {
 
